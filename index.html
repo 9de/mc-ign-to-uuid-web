@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft UUID Lookup</title>
+	 <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Minecraft UUID Lookup</h1>
+        
+        <div class="minecraft-box">
+            <label class="field-label">Enter Minecraft Usernames (one per line):</label>
+            <textarea id="usernamesInput" placeholder="Example:
+Notch
+Dream
+Technoblade"></textarea>
+            <div class="button-row">
+                <button id="fetchButton">Fetch UUIDs</button>
+                <button id="clearInputButton" class="copy-button">Clear Input</button>
+            </div>
+            <div class="status" id="statusMessage"></div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-text" id="progressText">0/0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="minecraft-box">
+            <label class="field-label">UUID Results:</label>
+            <textarea id="resultsOutput" readonly placeholder="UUIDs will appear here after lookup"></textarea>
+            <div class="button-row">
+                <button id="copyButton" class="copy-button">Copy All UUIDs</button>
+                <button id="copyUUIDsOnlyButton" class="copy-button tooltip">
+                    Copy UUIDs Only
+                    <span class="tooltiptext">Copy UUIDs without usernames</span>
+                </button>
+                <button id="clearResultsButton" class="copy-button">Clear Results</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="copy-notification" id="copyNotification">Copied to clipboard!</div>
+    <div class="minecraft-texture"></div>
+    
+    <script src="script.js">
+</body>
+</html>
